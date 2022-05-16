@@ -1,0 +1,34 @@
+{
+  "pizzas": [
+    {
+      "id": "b08a5600-4c1d-11ea-a932-9b5a205eb847",
+      "name": "fromages",
+      "category": "Tomate",
+      "ingredients": ["emmental", "olives"],
+      "price": 8.5,
+      "image": "assets/categories/tomato.png"
+    },
+    {
+      "id": "a676fd80-4c1d-11ea-a932-9b5a205eb847",
+      "name": "chèvre chaud",
+      "category": "Crème",
+      "ingredients": ["chèvre", "jambon", "emmental", "olives"],
+      "price": 11.5,
+      "image": "assets/categories/cream.png"
+    },
+    {
+      "id": "eeafe990-4c1d-11ea-a932-9b5a205eb847",
+      "name": "4 fromages",
+      "category": "Crème",
+      "ingredients": [
+        "chèvre",
+        "roquefort",
+        "mozzarella",
+        "emmental",
+        "olives"
+      ],
+      "price": 12,
+      "image": "assets/categories/cream.png"
+    }
+  ]
+}

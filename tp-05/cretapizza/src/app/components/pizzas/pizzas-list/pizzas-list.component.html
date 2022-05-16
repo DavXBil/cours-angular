@@ -1,0 +1,12 @@
+<h3 class="mb-4 text-center">Liste des pizzas</h3>
+<div class="pizzas d-flex flex-wrap w-100 justify-content-center">
+  <div
+    *ngFor="let pizza of pizzas; index as i"
+    [attr.data-title]="pizza.name"
+    (click)="selectPizza(i)"
+    [selected]="selected?.id === pizza.id"
+    class="card p-1 m-2 shadow-sm"
+    appPizzasDirective>
+    <img [src]="pizza.image" alt="Catégorie tomate">
+  </div>
+</div>

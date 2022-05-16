@@ -1,0 +1,60 @@
+<div class="row justify-content-md-center">
+        <h3 class="m-5 text-center">Créer une nouvelle pizza</h3>
+      
+        <div class="col col-md-6">
+      
+          <form [formGroup]="formCreatePizza" class="text-center" (ngSubmit)="onSubmit()">
+      
+            <div class="form-floating mb-4 row">
+              <input
+                type="text"
+                formControlName="name"
+                class="form-control"
+                id="name"
+                placeholder="Nom de la pizza">
+              <label for="name">Nom de la pizza</label>
+            </div>
+      
+            <div class="form-floating mb-4 row">
+              <label for="category">Catégorie</label>
+              <select
+                class="form-control"
+                formControlName="category"
+                id="category"
+                placeholder="Nom de la pizza">
+                  <option
+                    *ngFor="let category of categories"
+                    [ngValue]="category">
+                    {{ category }}
+                  </option>
+              </select>
+            </div>
+      
+            <div class="form-floating mb-4 row">
+              <input
+                type="number"
+                formControlName="price"
+                class="form-control"
+                id="price"
+                placeholder="Prix de vente">
+              <label for="price">Prix de vente</label>
+            </div>
+      
+            <div class="form-floating mb-4 row">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="ingredients"
+                id="ingredients"
+                placeholder="Prix de venter">
+              <label for="ingredients">Ingrédients</label>
+            </div>
+            
+            <button class="btn btn-danger mt-3" [disabled]="formCreatePizza.invalid">
+              Valider
+            </button>
+            
+          </form>
+          
+        </div>
+      </div>

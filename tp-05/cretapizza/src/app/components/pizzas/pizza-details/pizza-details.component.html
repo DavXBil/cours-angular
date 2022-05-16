@@ -1,0 +1,26 @@
+<div class="card" *ngIf="pizza">
+        <div class="card-header">
+          <h5 class="card-title text-center pt-2">La {{ pizza.name |titlecase }} en détail</h5>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img [src]="pizza.image" [alt]="'Catégorie ' + pizza.category">
+          </div>
+          <div class="col-md-6 fs-4 d-flex flex-column justify-content-center p-5">
+            <div class="mb-4">
+              <strong>Catégorie:</strong> {{ pizza.category }}
+            </div>
+            <div class="mb-4">
+              <strong>Prix:</strong> {{ pizza.price }} €
+            </div>
+            <div class="mb-4">
+              <strong>Ingrédients:</strong>
+              <span *ngFor="let ingredient of pizza.ingredients; last as last"> {{ ingredient }}{{ last? '' : ', ' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="!pizza && thereArePizzas" class="alert alert-success text-center">
+        Choisissez une pizza !
+      </div>

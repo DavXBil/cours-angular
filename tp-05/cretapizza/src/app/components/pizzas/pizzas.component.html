@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col text-center">
+    <app-pizzas-list
+      [pizzas]="pizzas$ |async"
+      (selectPizza)="currentPizza = pizzas$.value[$event]">
+    </app-pizzas-list>
+  </div>
+  <hr class="my-5">
+  <div class="col">
+    <app-pizza-details
+      [pizza]="currentPizza"
+      [thereArePizzas]="pizzas$.value && pizzas$.value.length > 0"
+      ></app-pizza-details>
+  </div>
+</div>

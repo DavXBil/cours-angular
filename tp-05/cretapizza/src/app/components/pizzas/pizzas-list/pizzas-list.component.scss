@@ -1,0 +1,62 @@
+.pizzas {
+        .card {
+          cursor: pointer;
+          width: 30vw;
+          height: 30vw;
+          background-color: white;
+          margin-bottom: 40px;
+          background-color: #fff;
+          background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%), linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%);
+          background-size: 8px 8px;
+          background-position: 0 0, 4px 4px;
+          &::after {
+            content: attr(data-title);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            color: #444;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: burlywood;
+            box-shadow: 1px 1px 0 #550303;
+            border-radius: 4px;
+            text-align: center;
+            font: {
+              size: 1.3rem;
+              weight: bold;
+            };
+          }
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .pizzas {
+          .card {
+            width: 120px;
+            height: 120px;
+            &::after {
+              border-radius: 0;
+              box-shadow: none;
+              width: 100%;
+              padding: 4px 0;
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+      
+      @media (max-width: 580px) {
+        .pizzas {
+          display: block !important;
+          .card {
+            min-width: 550px;
+            height: 160px;
+            overflow: hidden;
+            &::after {
+              height: 55px;
+            }
+          }
+        }
+      }

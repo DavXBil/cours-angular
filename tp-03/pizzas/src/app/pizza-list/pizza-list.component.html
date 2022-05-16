@@ -1,0 +1,7 @@
+<div
+  class="pizza-item"
+  [class.selected]="pizza.current"
+  *ngFor="let pizza of pizzas"
+  (click)="onSelect(pizza)">
+  {{ pizza.name }}
+</div>

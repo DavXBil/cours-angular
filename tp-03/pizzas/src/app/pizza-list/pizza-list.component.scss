@@ -1,0 +1,14 @@
+.pizza-item {
+        cursor: pointer;
+        padding: 5px 0;
+        text-align: center;
+        &:hover {
+          font-size: 1.1rem;
+          text-shadow: 1px 1px 0.5px #aaa;
+        }
+      }
+      
+      .selected {
+        color: darkcyan;
+        font-weight: bold;
+      }

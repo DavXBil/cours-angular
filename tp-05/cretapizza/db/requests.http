@@ -1,0 +1,39 @@
+GET http://localhost:3000/pizzas
+
+###
+
+###
+
+GET http://localhost:3000/pizzas/eeafe990-4c1d-11ea-a932-9b5a205eb847
+
+###
+
+PATCH http://localhost:3000/pizzas/eeafe990-4c1d-11ea-a932-9b5a205eb847
+Content-Type: application/json
+
+{
+  "name": "yeah",
+  "price": 912435
+}
+
+###
+
+POST http://localhost:3000/pizzas
+Content-Type: application/json
+
+{
+  "id": "32d3a574-a633-4c29-8a60-a33175b9afef",
+  "name": "marguaritta",
+  "category": "Tomate",
+  "ingredients": [
+    "jambon",
+    "emmental",
+    "olives"
+  ],
+  "price": 999,
+  "image": "assets/categories/tomato.png"
+}
+
+###
+
+DELETE http://localhost:3000/pizzas/a676fd80-4c1d-11ea-a932-9b5a205eb847

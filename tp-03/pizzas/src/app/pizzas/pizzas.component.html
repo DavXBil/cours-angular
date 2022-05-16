@@ -1,0 +1,13 @@
+<h1>Commandez une pizza !</h1>
+
+<div class="container">
+  <div class="pizzas" *ngIf="pizzas && pizzas.length">
+    <app-pizza-list
+      (selectOne)="selected = $event"
+      [pizzas]="pizzas">
+    </app-pizza-list>
+  </div>
+  <div class="pizza">
+    <app-pizza-details [pizza]="selected"></app-pizza-details>
+  </div>
+</div>
